@@ -12,27 +12,29 @@
 <body>
     <header class="lottery-top">
         <a class="backHome" href="#"><i class="icon icon-back"></i></a>
-        <div class="title pos1">历史记录</div>
+        <div class="title pos1" id="title">
+            <script id="titletpl" type="text/html">{{title}}</script>
+        </div>
     </header>
-    <section class="history-cont" id="history">
-        <script id="historytpl" type="text/html">
-            {{each data dd index}}
-                <div class="list">
-                    <img class="logo pos1" src="dist/images/logo.png" />
-                    <div class="txt-1"><span class="t1"><i class="f1">BTC</i>指数</span><span class="t2">/{{dd.day + ' ' + dd.time}}盘口</span></div>
-                    <div class="txt-2">{{if dd.type == 0}} 看空 {{else}} 看多 {{/if}}，投入{{dd.count + ' ' + dd.coinName}}</div>
-                    {{if dd.profit < 0}}
-                        <div class="txt-3 down pos1">失败</div>
-                        {{else}}
-                            <div class="txt-3 up pos1">
-                                <p class="t1">+{{dd.profit/100}}</p>
-                                <p class="t2">+{{dd.odds * 100}}%</p>
-                            </div>
-                    {{/if}}
-                </div>
-            {{/each}}
-        </script>
-    </section>
+<section class="history-cont" id="history">
+    <script id="historytpl" type="text/html">
+        {{each data dd index}}
+            <div class="list">
+                <img class="logo pos1" src="dist/images/logo.png" />
+                <div class="txt-1"><span class="t1"><i class="f1">BTC</i>指数</span><span class="t2">/{{dd.day + ' ' + dd.time}}盘口</span></div>
+                <div class="txt-2">{{if dd.type == 0}} 看空 {{else}} 看多 {{/if}}，投入{{dd.count + ' ' + dd.coinName}}</div>
+                {{if dd.profit < 0}}
+                    <div class="txt-3 down pos1">失败</div>
+                    {{else}}
+                        <div class="txt-3 up pos1">
+                            <p class="t1">+{{dd.profit/100}}</p>
+                            <p class="t2">+{{dd.odds * 100}}%</p>
+                        </div>
+                {{/if}}
+            </div>
+        {{/each}}
+    </script>
+</section>
 
 
     <script type="text/javascript" src="dist/jquery-3.3.1.min.js"></script>
