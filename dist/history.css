@@ -1,0 +1,233 @@
+@charset "utf-8";
+.clear {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+.clearfix:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+    *zoom: 1;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a,
+label,
+input,
+button,
+select,
+textarea {
+    outline: none
+}
+h1,
+h2, 
+h3,
+h4{
+    font-size: 100%;
+    font-weight: normal;    
+}
+body,
+button,
+input,
+select,
+textarea {
+    word-wrap: break-word;
+}
+textarea {
+    resize: none;
+}
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal
+}
+ul,
+ol {
+    list-style: none;
+}
+fieldset,
+img {
+    border: 0;
+    vertical-align: bottom;
+}
+section,
+article,
+aside,
+header,
+footer,
+nav,
+dialog,
+figure {
+    display: block;
+}
+input,
+select,
+button,
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: transparent;
+    border-color: transparent;
+}
+/* 清除谷歌浏览器下的 search 叉号 */
+input::-webkit-search-cancel-button {
+    display: none;
+}
+/* 清除IE下的 search 叉号 */
+input[type=search]::-ms-clear {
+    display: none;
+}
+select::-ms-clear,
+select::-ms-reveal,
+input::-ms-clear,
+input::-ms-reveal {
+    display: none;
+}
+img {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: none;
+}
+
+
+body {
+    overflow-x: hidden;
+    color: #6d769b;
+    font-size: .22rem;
+    font-family: 'Microsoft Yahei', 'arial', 'Helvetica', 'PingFangSC-Regular', sans-serif;
+    background-color: #101838;
+    margin:0 auto;
+    -webkit-font-smoothing: antialiased; 
+    -webkit-tap-highlight-color:rgba(255, 255, 255, 0);
+    padding-top: 1.6rem;
+}
+/* 字体 */
+.f1 {
+    font-family: 'HelveticaBold', 'Microsoft Yahei', 'arial', sans-serif;
+}
+/* 定位 */
+.pos1 {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+/* 图标 */
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: inline-block;
+    width: .42rem;
+    height: .42rem;
+    background-repeat: no-repeat;
+}
+.icon-back {
+    background-image: url(images/back.png);
+    background-size: contain;
+    left: .35rem;
+}
+/* lotter top */
+.lottery-top{
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.6rem;
+    background-color: #0d1430;
+    padding: .22rem .35rem .25rem 2.22rem;
+}
+.backHome{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+}
+.lottery-top .title {
+    color: #fff;
+    font-size: .48rem;
+    left: 1.4rem;
+}
+/* 历史记录 */
+.history-cont{
+    width: 62.5%;
+    margin: 0 auto;
+}
+.history-cont .list{
+    position: relative;
+    border-radius: .15rem;
+    line-height: .48rem;
+    background-color: #1c264e;
+    padding: .4rem .55rem .35rem 1.65rem;
+    margin-bottom: .18rem;
+}
+.history-cont .list .logo{
+    left: .45rem;
+    height: .82rem;
+    width: .82rem;
+}
+.history-cont .list .txt-1{
+    letter-spacing: .02rem;
+}
+.history-cont .list .txt-1 .t1{
+    color: #fff;
+    font-size: .42rem;
+}
+.history-cont .list .txt-1 .t1 i{
+    font-style: normal;
+}
+.history-cont .list .txt-1 .t2 {
+    color: #f7931a;
+    font-size: .3rem;
+    padding-left: .1rem;
+}
+.history-cont .list .txt-2{
+    font-size: .28rem;
+    font-family: 'Helvetica','Microsoft Yahei', 'arial',sans-serif;
+}
+.history-cont .list .txt-3 {
+    right: .55rem;
+    line-height: .44rem;
+    text-align: right;
+    letter-spacing: .02rem;
+}
+.history-cont .list .txt-3.down {
+    color: #db4835;
+    font-size: .36rem;
+}
+.history-cont .list .txt-3.up {
+    font-family: 'Helvetica', 'Microsoft Yahei', 'arial', sans-serif;
+}
+.history-cont .list .txt-3.up .t1 {
+    color: #2baa42;
+    font-size: .44rem;
+}
+.history-cont .list .txt-3.up .t2 {
+    color: #fff;
+    font-size: .28rem;
+}
+
