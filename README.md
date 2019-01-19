@@ -34,7 +34,7 @@
 ```javascript
 var $history = {
     init: function () {
-		//模拟ajax获取数据
+        //模拟ajax获取数据
         var datas = {}, data = [];
         for(var i = 1; i < 15; i++){
             var dd = {};
@@ -92,7 +92,7 @@ var $history = {
 ```
 
 ### 5. 初始化数据
-```
+```javascript
 $(function () {
     //初始化数据
     $history.init();
