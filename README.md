@@ -9,6 +9,12 @@
 
 ### 2. 编写HTML模板
 ```html
+<header class="lottery-top">
+    <a class="backHome" href="#"><i class="icon icon-back"></i></a>
+    <div class="title pos1" id="title">
+        <script id="titletpl" type="text/html">{{title}}</script>
+    </div>
+</header>
 <section class="history-cont" id="history">
     <script id="historytpl" type="text/html">
         {{each data dd index}}
@@ -35,7 +41,9 @@
 var $history = {
     init: function () {
         //模拟ajax获取数据
-        var datas = {}, data = [];
+        var datas = {};
+        var title = "历史记录";
+        var data = [];
         for(var i = 1; i < 15; i++){
             var dd = {};
             if(i % 3 === 0){
@@ -52,11 +60,12 @@ var $history = {
             dd.odds = i / 10;
             data.push(dd);
         }
+        datas.title = title;
         datas.data = data;
 
         //渲染数据
         $history.renderIndexDom("history", "historytpl", datas);
-        $history.renderIndexDom("title", "", datas);
+        $history.renderIndexDom("title", "titletpl", datas);
     },
     //渲染模板
     renderIndexDom: function (domid, tplid, data) {
@@ -79,12 +88,12 @@ var $history = {
             dataType:"json",
             success:function(res){
                 //渲染数据
-                $history.renderIndexDom("history","historytpl",res.data);
+                $history.renderIndexDom("history", "historytpl", res.data);
             }
         });
     },
     //渲染模板
-    renderIndexDom:function(domid,tplid,data){
+    renderIndexDom:function(domid, tplid, data){
         var html = template(tplid, data);
         document.getElementById(domid).innerHTML = html;
     }
